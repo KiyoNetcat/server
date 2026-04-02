@@ -27,7 +27,7 @@ rustPlatform.buildRustPackage rec {
     patchelf $out/bin/stardust-xr-server --add-rpath ${openxr-loader}/lib
     patchelf $out/bin/stardust-xr-server --add-rpath ${libxkbcommon}/lib
 
-    wrapPrograrm $out/bin/stardust-xr-server \
+    wrapProgram $out/bin/stardust-xr-server \
       --set XKB_CONFIG_ROOT "${xkeyboard_config}/share/X11/xkb"
   '';
 
